@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;700;900&display=swap');
+/* font-family: 'Poppins', sans-serif; */
+
+/* ========= CSS Reset ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ================================ */
+
+/* ========== Global Variables =============== */
+:root {
+    --bg-color: rgb(255, 255, 255);
+    --primary-text-color: #183b56;
+    --secondary-text-color: #577592;
+    --accent-color: #f3faff;
+    --card-color: rgb(245, 245, 245);
+    --border-color: #e1e1e1;
+    --button-color: #2196f3;
+    --shadow-color: #bbd0e2;
+    --transition: all 0.3s;
+}
+
+[data-theme="dark"] {
+    --bg-color: #1f1f1f;
+    --primary-text-color: #ffffff;
+    --secondary-text-color: #c5c5c5;
+    --accent-color: #142a3a;
+    --card-color: #2d2f31;
+    --border-color: #383838;
+    --button-color: #2d2f31;
+}
+
+/* :root {
+    --primary-text-color-dark: #183b56;
+    --secondary-text-color-dark: #577592;
+    --primary-text-color: #183b56;
+    --secondary-text-color: #577592;
+    --accent-color: #f3faff;
+    --accent-color-dark: #1d69a3;
+    --shadow-color: #bbd0e2;
+    --button-color: #2196f3;
+} */
+/* ==============⬆⬆=========================== */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--primary-text-color);
+    background-color: var(--bg-color);
+}
+
+/* =============== Scroll-Bar Styling =========== */
+body::-webkit-scrollbar {
+    background-color: #686868;
+    width: 7px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #a7a7a7;
+    width: 6px;
+    border-radius: 24px;
+}
+
+body::-webkit-scrollbar-thumb:active {
+    background-color: rgb(20, 20, 20);
+}
+
+/* ============================================= */
+
+p {
+    font-family: 'Poppins', sans-serif;
+    color: var(--secondary-text-color);
+    line-height: 1.4rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/*================= Utitlity Classes ================= */
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    /* max-width: calc(100% - 10rem); */
+    max-width: 1280px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.hover-link.active {
+    border-bottom: 2px solid var(--primary-text-color);
+}
+
+/*================================== */
+
+
+
+
+
+/* =========== Main Nav ============ */
+nav {
+    background-color: var(--accent-color);
+    /* box-shadow: 0 0 10px var(--shadow-color); */
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.main-nav {
+    min-height: 4.5rem;
+    justify-content: space-between;
+    padding: 10px 20px;
+    align-items: center;
+}
+
+
+/* ============ LOGO DESIGNING  ==================== */
+.logo {
+    text-align: center;
+}
+
+.logo a {
+    flex-direction: column;
+}
+
+.logo a span {
+    color: #009fff;
+    font-weight: 800;
+    font-size: 1.2rem;
+    line-height: 20px;
+    border-top: 2px solid var(--primary-text-color);
+    padding-top: 4px;
+}
+
+.logo a p {
+    font-size: 10px;
+    line-height: 14px;
+    padding-bottom: 4px;
+    border-bottom: 2px solid var(--primary-text-color);
+}
+
+/* .logo img {
+    max-width: 120px;
+} */
+/* ===================================================== */
+
+
+.nav-item {
+    padding: 5px 20px;
+}
+
+.hover-link {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    cursor: pointer;
+    color: var(--primary-text-color);
+}
+
+.hover-link:hover {
+    color: var(--secondary-text-color);
+}
+
+.hover-link:active {
+    color: red;
+}
+
+.search-bar {
+    gap: 10px;
+}
+
+.news-input {
+    width: 200px;
+    height: 100%;
+    padding: 5px 12px;
+    border-radius: 5px;
+    border: 1px solid var(--primary-text-color);
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--card-color);
+}
+
+.search-btn {
+    padding: 5px 12px;
+    border-radius: 5px;
+    background: linear-gradient(45deg, var(--button-color), var(--accent-color));
+    border: none;
+    color: white;
+    transition: var(--transition);
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+}
+
+.search-btn i {
+    display: none;
+}
+
+.search-btn:hover {
+    background-color: var(--accent-color-dark);
+}
+
+.search-btn:active {
+    background-color: red;
+    transform: scale(0.9);
+}
+
+/* ====================== CHECKBOX STYLING ========================== */
+#checkbox {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 40px;
+    height: 24px;
+    border-radius: 30px;
+    background-color: var(--primary-text-color);
+    position: fixed;
+    /* top: 50px; */
+    right: 10px;
+    transition: all 0.5s ease-in;
+    cursor: pointer;
+    z-index: 1;
+}
+
+/* Making a dot switch inside the Toggle Button */
+#checkbox::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--bg-color);
+    position: absolute;
+    top: 50%;
+    left: 3px;
+    transform: translateY(-50%);
+    transition: all 0.5s ease;
+}
+
+/* Changing toggle button background when checked */
+#checkbox:checked {
+    background: var(--primary-text-color);
+}
+
+/* Changing dot switch color and moving to the right side when checked */
+#checkbox:checked::before {
+    background: var(--bg-color);
+    left: 18px;
+}
+
+/* ================================================================= */
+
+
+.ham-icon {
+    display: none;
+}
+
+.ham-icon i {
+    font-size: 1.5rem;
+    padding: 0;
+}
+
+/* ======================= */
+
+
+
+/* =========== Card Section ============ */
+main {
+    margin-top: 80px;
+    padding: 20px 10px;
+}
+
+.cards-container {
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+    align-items: flex-start;
+    cursor: pointer;
+}
+
+.card {
+    max-width: 300px;
+    min-width: 250px;
+    background-color: var(--card-color);
+    min-height: 500px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    /* box-shadow: 0 0 4px var(--shadow-color); */
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    background-color: var(--accent-color);
+    box-shadow: 0px 0px 6px var(--shadow-color);
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.card-header {
+    width: 100%;
+    height: 165px;
+    overflow: hidden;
+    display: flex;
+}
+
+.card-header img {
+    /* max-width: 100%;
+    height: 170px; */
+    width: 100%;
+    object-fit: cover;
+}
+
+.card-content {
+    flex-direction: column;
+    gap: 10px;
+    padding: 1rem;
+    align-items: start;
+}
+
+/* ====================================== */

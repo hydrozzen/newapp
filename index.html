@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NewsSync - Stay Synced</title>
+    <link rel="shortcut icon" href="assets/logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+
+<body>
+    <nav>
+        <div class="main-nav flex container">
+            <div class="logo">
+                <a href="index.html" class="flex">
+                   <img src="assets/logo.png" alt="company logo">
+                  
+                </a>
+            </div>
+            <div id="nav-links-container" class="nav-links">
+                <ul class="flex">
+                    <li class="nav-item hover-link" id="latest">Latest</li>
+                    <li class="nav-item hover-link" id="cricket" >Cricket</li>
+                    <li class="nav-item hover-link" id="technology">Technology</li>
+                </ul>
+            </div>
+            <div class="search-bar flex">
+                <input id="search-text" type="text" class="news-input" placeholder="e.g. Cricket">
+                <button id="search-btn" class="search-btn">Search<i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch flex" for="checkbox">
+                    <input type="checkbox" id="checkbox" />
+                </label>
+            </div>
+            <div id="ham-icon" class="ham-icon">
+                <!-- <ion-icon id="three-lines" class="nav-item hover-link" name="menu"></ion-icon> -->
+                <i class="fa fa-solid fa-bars" id="bars"></i>
+                <!-- <i class="fa-solid fa-xmark"></i> -->
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="cards-container container flex" id="cards-container">
+
+        </div>
+    </main>
+
+    <template id="news-card-template">
+        <div class="card">
+            <div class="card-header">
+                <img src="https://via.placeholder.com/400x200" alt="" id="news-img" loading="lazy">
+            </div>
+            <div class="card-content flex">
+                <h3 id="news-title">This is title</h3>
+                <h6 id="news-source">End Gadget : 26/06/2015</h6>
+                <p id="news-desc">Lorem, ips Lamet consectetur adipisicing elit. Nesciunt quod rerum repellat
+                    architecto sequi recusandae deserunt mollitia, earum facere fuga doloremque incidunt praesentium
+                    et? Ipsam mollitia quae labore minus laudantium laborum nisi. um dolor sit amet consectetur
+                    adipisicing elit. Quibusdam placeat ullam pra</p>
+                <a href="https://biztoc.com/x/4d2fe83ab8016466" id="news-url" target="_blank"><button
+                        class="search-btn">Read More</button></a>
+            </div>
+        </div>
+    </template>
+
+    <script src="main.js" defer></script>
+    <script src="https://kit.fontawesome.com/ca3be2fc43.js" crossorigin="anonymous" defer></script>
+
+</body>
+
+</html>
